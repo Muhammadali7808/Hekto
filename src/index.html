@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    .text_header {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      color: #f1f1f1;
+    }
+
+    :root {
+      --bg-shade: #eeeffb;
+      --grey-text: rgba(21, 24, 117, 0.1);
+      --accent: #fb2e86;
+      --white: #fff;
+      --ugsadug: #9f63b5;
+      --text: #151875;
+      --sky-blue: #00c1fe;
+      --section-hover: #2f1ac4;
+      --sale-tage-coloe: #3f509e;
+      --price-tag-color: #fb2448;
+      --violet: #7e33e0;
+      --sub-text-color: #8a8fb9;
+      --page-button-color: #e0d3f5;
+      --pink: #fb2e86;
+    }
+
+    .list_text {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      color: #f1f1f1;
+    }
+
+    .hero_1_link {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 125%;
+      color: #0d0e43;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+
+    body {
+      background-color: #fff;
+    }
+
+    .hero_inp {
+      border: 2px solid #e7e6ef;
+      width: 317px;
+      height: 40px;
+      position: relative;
+    }
+
+    .box_title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 42px;
+      color: #1a0b5b;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .block_link {
+      &:hover {
+        color: #fb4997;
+      }
+    }
+
+    .block_titles {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 42px;
+      color: var(--text);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .what_title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 42px;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .what_link {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--text);
+      margin-top: 27px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: block;
+      box-shadow: 0 8px 40px 0 rgba(49, 32, 138, 0.05);
+      background: var(--white);
+    }
+
+    .what_text {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      text-align: center;
+      color: rgba(26, 11, 91, 0.3);
+      text-align: center;
+    }
+
+    .tren_title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 132%;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      margin-bottom: 30px;
+      text-align: start;
+    }
+
+    .tren_item {
+      display: flex;
+      gap: 17px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .tren_text {
+      font-family: var(--second-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 132%;
+      letter-spacing: 0.01em;
+      color: #acabc3;
+    }
+
+    .btn_tren {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      border-radius: 2px;
+      background: var(--accent);
+      padding: 14px 24px;
+      border: none;
+    }
+
+    .tren_links {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .tren_strong {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 40px;
+    }
+
+    .pro_title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 42px;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 39px;
+    }
+
+    .prot_text {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 26px;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .prot_strong {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .data_1 {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .data_2 {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      text-decoration: line-through;
+      text-align: center;
+      color: var(--text);
+    }
+  </style>
+
+  <body>
+    <header class="bg-[#7e33e0] pt-[12px] pb-[15px]">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <ul class="flex gap-[48px]">
+            <li class="flex gap-[5px] items-center">
+              <img src="./img/img_1.svg" alt="img" />
+              <a class="text_header" href="#">mhhasanul@gmail.com</a>
+            </li>
+            <li class="flex gap-[5px] items-center">
+              <img src="./img/img_2.svg" alt="img" />
+              <a class="text_header" href="#">(12345)67890</a>
+            </li>
+          </ul>
+          <ul class="flex gap-[17px]">
+            <li class="flex gap-[3px] items-center">
+              <a class="list_text" href="#">English</a>
+              <img src="./img/img_3.svg" alt="img" />
+            </li>
+            <li class="flex gap-[3px] items-center">
+              <a class="list_text" href="#">USD</a>
+              <img src="./img/img_3.svg" alt="img" />
+            </li>
+            <li class="flex gap-[3px] items-center">
+              <a class="list_text" href="#">Login</a>
+              <img src="./img/img_3.svg" alt="img" />
+            </li>
+            <li class="flex gap-[3px] items-center">
+              <a class="list_text" href="#">Wishlist</a>
+              <img src="./img/img_3.svg" alt="img" />
+            </li>
+            <li class="flex gap-[3px] items-center">
+              <img src="./img/img_3.svg" alt="img" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <h1 class="absolute text-4xl top-[700px] right-[100px] title_price"></h1>
+    <div
+      class="absolute muhammadAli top-[400px] w-[60%] bg-white h-[400px] border-[4px] border-blue-500"
+    ></div>
+    <section class="pt-[19px] pb-[19px]">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <div class="hero_1">
+            <img src="./img/Hekto.svg" alt="img" />
+          </div>
+          <ul class="flex gap-[35px]">
+            <li class="flex gap-[5px] items-center">
+              <a class="hero_1_link" href="#">home</a>
+            </li>
+            <li>
+              <a class="hero_1_link" href="#">Pages</a>
+            </li>
+            <li>
+              <a class="hero_1_link" href="#">Products</a>
+            </li>
+            <li>
+              <a class="hero_1_link" href="#">Blog</a>
+            </li>
+            <li>
+              <a class="hero_1_link" href="#">Shop</a>
+            </li>
+            <li>
+              <a class="hero_1_link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="relative" method="post">
+            <input class="hero_inp" type="text" />
+            <button
+              class="w-[51px] h-[40px] bg-pink-600 absolute right-0"
+            ></button>
+            <img
+              class="absolute right-[10px] top-[10px]"
+              src="./img/img_5.svg"
+              alt="img"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#f2f0ff] pt-[40px] pb-[36px]">
+      <div class="container">
+        <div class="content">
+          <div class="flex items-center about"></div>
+          <div class="coment"></div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-[130px] pb-[70px]">
+      <div class="container">
+        <h2 class="box_title">Featured Products</h2>
+        <div class="box flex gap-[29px]"></div>
+        <img
+          class="ml-auto mr-auto mt-[53px]"
+          src="./img/img_9.svg"
+          alt="img"
+        />
+      </div>
+    </section>
+    <section class="pb-[60px]">
+      <div class="container">
+        <div class="block_div">
+          <h2 class="block_titles">Leatest Products</h2>
+          <ul class="flex gap-[60px] justify-center mb-[60px]">
+            <li>
+              <a
+                class="block_link font-normal text-[18px] text-[#151875]"
+                href="#"
+                >New Arrival</a
+              >
+            </li>
+            <li>
+              <a
+                class="block_link font-normal text-[18px] text-[#151875]"
+                href="#"
+                >Best Seller</a
+              >
+            </li>
+            <li>
+              <a
+                class="block_link font-normal text-[18px] text-[#151875]"
+                href="#"
+                >Featured</a
+              >
+            </li>
+            <li>
+              <a
+                class="block_link font-normal text-[18px] text-[#151875]"
+                href="#"
+                >Special Offer</a
+              >
+            </li>
+          </ul>
+          <div
+            class="liener grid grid-cols-3 gap-y-[120px] items-center gap-[37px]"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-[135px]">
+      <div class="container">
+        <h2 class="what_title">What Shopex Offer!</h2>
+        <ul class="flex items-center justify-between">
+          <li class="w-[270px] h-[320px]">
+            <div>
+              <img
+                class="ml-auto mr-auto what_img"
+                src="./img/img_11.svg"
+                alt="img"
+              />
+            </div>
+            <div>
+              <a class="what_link" href="#">24/7 Support</a>
+              <p class="what_text">
+                Lorem ipsum dolor sit amet, <br />
+                consectetur adipiscing elit. <br />
+                Massa purus gravida.
+              </p>
+            </div>
+          </li>
+          <li class="w-[270px] h-[320px]">
+            <div>
+              <img
+                class="ml-auto mr-auto what_img"
+                src="./img/img_11.svg"
+                alt="img"
+              />
+            </div>
+            <div>
+              <a class="what_link" href="#">24/7 Support</a>
+              <p class="what_text">
+                Lorem ipsum dolor sit amet, <br />
+                consectetur adipiscing elit. <br />
+                Massa purus gravida.
+              </p>
+            </div>
+          </li>
+          <li class="w-[270px] h-[320px]">
+            <div>
+              <img
+                class="ml-auto mr-auto what_img"
+                src="./img/img_11.svg"
+                alt="img"
+              />
+            </div>
+            <div>
+              <a class="what_link" href="#">24/7 Support</a>
+              <p class="what_text">
+                Lorem ipsum dolor sit amet, <br />
+                consectetur adipiscing elit. <br />
+                Massa purus gravida.
+              </p>
+            </div>
+          </li>
+          <li class="w-[270px] h-[320px]">
+            <div>
+              <img
+                class="ml-auto mr-auto what_img"
+                src="./img/img_11.svg"
+                alt="img"
+              />
+            </div>
+            <div>
+              <a class="what_link" href="#">24/7 Support</a>
+              <p class="what_text">
+                Lorem ipsum dolor sit amet, <br />
+                consectetur adipiscing elit. <br />
+                Massa purus gravida.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="bg-[#f1f0ff]">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <div>
+            <img src="./img/img_12.png" alt="img" />
+          </div>
+          <div>
+            <h2 class="tren_title">
+              Unique Features Of leatest & <br />
+              Trending Poducts
+            </h2>
+            <ul class="mb-[38px]">
+              <li class="tren_item">
+                <img src="./img/img_13.svg" alt="img" />
+                <p class="tren_text">
+                  All frames constructed with hardwood solids and laminates
+                </p>
+              </li>
+              <li class="tren_item">
+                <img src="./img/img_13.svg" alt="img" />
+                <p class="tren_text">
+                  Reinforced with double wood dowels, glue, screw - nails corner
+                  <br />
+                  blocks and machine nails
+                </p>
+              </li>
+              <li class="tren_item">
+                <img src="./img/img_13.svg" alt="img" />
+                <p class="tren_text">
+                  Arms, backs and seats are structurally reinforced
+                </p>
+              </li>
+            </ul>
+            <div class="flex gap-[20px] items-center">
+              <button class="btn_tren">Add To Cart</button>
+              <div class="">
+                <div>
+                  <a class="tren_links" href="#">B&B Italian Sofa </a>
+                </div>
+                <strong class="tren_strong">$32.00</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-[132px] pb-[126px]">
+      <div class="container">
+        <h2 class="pro_title">Trending Products</h2>
+        <div class="product flex gap-[32px] mb-[40px]"></div>
+        <ul class="flex gap-[30px] items-center">
+          <li
+            class="w-[420px] h-[320px] shadow-xl bg-[#fff6fb] pt-[34px] pl-[25px] pr-[126px]"
+          >
+            <div class="">
+              <p class="prot_text">23% off in all products</p>
+              <strong class="prot_strong">Shop Now</strong>
+            </div>
+            <img class="ml-[200px]" src="./img/img_15.png" alt="img" />
+          </li>
+          <li
+            class="w-[420px] h-[320px] shadow-xl bg-[#eeeffb] pt-[34px] pl-[25px] pr-[126px]"
+          >
+            <div class="">
+              <p class="prot_text">23% off in all products</p>
+              <strong class="prot_strong">View Collection</strong>
+            </div>
+            <img class="ml-[102px]" src="./img/img_16.png" alt="img" />
+          </li>
+          <li>
+            <div
+              class="w-[267px] h-[74px] flex gap-[10px] items-center mb-[40px] shadow-xl"
+            >
+              <div>
+                <img src="./img/img_17.svg" alt="img" />
+              </div>
+              <div>
+                <p class="data_1">Executive Seat chair</p>
+                <strong class="data_2">$32.00</strong>
+              </div>
+            </div>
+            <div
+              class="w-[267px] h-[74px] flex gap-[10px] items-center mb-[40px] shadow-xl"
+            >
+              <div>
+                <img src="./img/img_17.svg" alt="img" />
+              </div>
+              <div>
+                <p class="data_1">Executive Seat chair</p>
+                <strong class="data_2">$32.00</strong>
+              </div>
+            </div>
+            <div
+              class="w-[267px] h-[74px] flex gap-[10px] items-center shadow-2xl"
+            >
+              <div>
+                <img src="./img/img_17.svg" alt="img" />
+              </div>
+              <div>
+                <p class="data_1">Executive Seat chair</p>
+                <strong class="data_2">$32.00</strong>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script type="module" src="./data/main.js"></script>
+  </body>
+</html>
